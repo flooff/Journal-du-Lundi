@@ -52,6 +52,7 @@ h6{
 
 h3{
     font-size: 1.8rem;
+    font-weight: ;
     
 }
 hr {
@@ -112,6 +113,12 @@ hr {
 .mx-1{
     margin-left: 1rem;
     margin-right: 1rem;
+}
+
+.underline{
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--gray);
+    margin-bottom: 2rem;
 }
 /* generic */
 
@@ -180,7 +187,7 @@ nav{
     grid-template-columns: 80px auto;
     grid-template-rows: auto;
 }
-article-small p{
+.article-small p{
     margin: 0.5rem 0;
 }
 .article-small .article-content{
@@ -235,4 +242,73 @@ article-small p{
     padding: 1rem 0;
     margin-right: 1rem;
     outline: 0;
+}
+
+
+ /* content  */
+
+ .content{
+     margin: 3rem 0;
+     display: flex;
+     align-items: flex-start;
+ }
+
+ .articles{
+     flex:auto;
+ }
+ .articles article{
+     display: grid;
+     grid-template-columns: 1fr 80px;
+     grid-auto-rows: auto;
+     padding: 1rem 0;
+     grid-template-areas:
+     "h3 img"
+     "title img"
+     "content img"
+     "details img"
+     ;
+     margin-bottom: 2rem;
+ }
+ .articles article h3,
+ .articles article p{
+    margin: 0.2rem 0;
+ }
+
+ .articles article img{
+     grid-area: img;
+ }
+ .articles article h3{
+     grid-area: title;
+ }
+ .articles article p:first-child{
+    grid-area: content;
+ }
+ .artices article .article-author{
+     grid-area: author;
+ }
+ .articles article .text-hint{
+     grid-area: details;
+ }
+ .popular{
+     flex:350px;
+     padding: 0 1rem;
+     position: sticky;
+     top: 45px;
+ }
+
+ .popular ul li {
+     display: grid;
+     grid-template-columns: 50px auto;
+     place-items: center center;
+    margin-bottom: 1rem;
+ }
+
+ .popular ul li div:first-child{
+     font-size: 2rem;
+     color: var(--gray-hint);
+ }
+ .popular ul li p,
+.popular ul li h3 {
+    margin: 0.2rem;
+    
 }
